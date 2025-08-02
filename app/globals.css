@@ -44,4 +44,13 @@
     background-color: var(--color-primary);
     color: white;
   }
+  .h1 {
+    @apply text-[48px] xl:text-[80px] font-semibold leading-[1.1];
+  }
+  .h2 {
+    @apply text-[36px] xl:text-[40px] font-semibold leading-[1.1];
+  }
+  .h3 {
+    @apply text-[20px] xl:text-[24px] font-semibold leading-[1.1];
+  }
 }
