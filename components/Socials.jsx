@@ -1,12 +1,30 @@
+import Link from "next/link";
+import {
+  FaFacebook,
+  FaLinkedin,
+  FaGithub,
+  FaInstagram,
+  FaYoutube,
+} from "react-icons/fa";
 
-const Socials = () => {
+const socials = [
+  { icon: <FaFacebook />, path: "Facebook" },
+  { icon: <FaLinkedin />, path: "LinkedIn" },
+  { icon: <FaGithub />, path: "Github" },
+  { icon: <FaInstagram />, path: "Instagram" },
+  { icon: <FaYoutube />, path: "Youtube" },
+];
+
+const Socials = ({ containerStyles, IconStyles }) => {
   return (
-    <div className="flex items-center gap-4">
-      <a href="#" className="text-white hover:text-accent">Facebook</a>
-      <a href="#" className="text-white hover:text-accent">Twitter</a>
-      <a href="#" className="text-white hover:text-accent">LinkedIn</a>
+    <div className={containerStyles}>
+      {socials.map((social, index) => (
+        <Link key={index} href={social.path} className={IconStyles}>
+          {social.icon}
+        </Link>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default Socials
+export default Socials;
