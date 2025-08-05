@@ -33,7 +33,7 @@ function TabsTrigger({ className, ...props }) {
     <TabsPrimitive.Trigger
       data-slot="tabs-trigger"
       className={cn(
-        "inline-flex items-center w-full bg-[#27272c] justify-center whitespace-nowrap text-white rounded-lg p-3 text-balance font-medium ring-offset-white transition-all disabled:opacity-50 data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:font-bold data-[state=active]:shadow-sm",
+        "inline-flex items-center w-full bg-[#27272c] justify-center whitespace-nowrap text-base text-white rounded-lg p-3 text-balance font-medium ring-offset-white transition-all disabled:opacity-50 data-[state=active]:bg-accent data-[state=active]:text-primary data-[state=active]:font-bold data-[state=active]:shadow-sm",
         className
       )}
       {...props}
@@ -45,7 +45,10 @@ function TabsContent({ className, ...props }) {
   return (
     <TabsPrimitive.Content
       data-slot="tabs-content"
-      className={cn("flex-1 outline-none", className)}
+      className={cn(
+        "min-h-[480px] ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 dark:ring-offset-slate-950 dark:focus-visible:ring-slate-300",
+        className
+      )}
       {...props}
     />
   );
