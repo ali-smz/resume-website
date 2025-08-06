@@ -31,7 +31,7 @@ const projects = [
     category: "fullstack",
     description: "This is the second project",
     image: "/assets/work/thumb2.png",
-    stack: ["django", "rest framework", "react", "tailwind"],
+    stack: ["django", "DRF", "react", "tailwind"],
     github: "https://github.com/user/project-two",
     live: "https://project-two.com",
   },
@@ -65,7 +65,7 @@ const Work = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row xl:gap-[30px]">
-          <div className="w-full xl:w-1/2 xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none">
+          <div className="w-full xl:w-1/2 xl:h-[460px] flex flex-col xl:justify-between order-2 xl:order-none px-3">
             <div className="flex flex-col gap-[30px] h-1/2">
               <div className="text-8xl leading-none font-extrabold text-transparent text-outline">
                 {project.num}
@@ -135,7 +135,7 @@ const Work = () => {
               ))}
               <WorkSliderBtns
                 containerStyles="flex gap-2 absolute inset-y-1/2 left-0 right-0 w-full justify-between z-20 -translate-y-1/2 xl:inset-auto xl:bottom-0 xl:left-auto xl:right-0 xl:translate-y-0 xl:w-max"
-                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all"
+                btnStyles="bg-accent hover:bg-accent-hover text-primary text-[22px] w-[44px] h-[44px] flex justify-center items-center transition-all xl:rounded-full"
               />
             </Swiper>
           </div>

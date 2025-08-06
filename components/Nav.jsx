@@ -6,8 +6,8 @@ const links = [
   { href: "/", label: "Home" },
   { href: "/services", label: "Services" },
   { href: "/resume", label: "Resume" },
-  { href: "/contact", label: "Contact" },
   { href: "/work", label: "Work" },
+  { href: "/contact", label: "Contact" },
 ];
 
 const Nav = () => {
@@ -18,7 +18,9 @@ const Nav = () => {
         <Link key={link.href} href={link.href}>
           <span
             className={`
-              ${pathname === link.href && "text-accent border-b-2 border-accent"}
+              ${
+                pathname === link.href && "text-accent border-b-2 border-accent"
+              }
               capitalize font-medium hover:text-accent transition-all
             `}
           >
