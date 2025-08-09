@@ -17,33 +17,54 @@ import WorkSliderBtns from "@/components/WorkSliderBtns";
 const projects = [
   {
     num: "01",
-    title: "Project One",
-    category: "Frontend",
-    description: "This is the first project",
+    title: "Dadik Platform",
+    category: "fullstack",
+    description:
+      "a platform for legal document management and ai law assistance",
     image: "/assets/work/thumb1.png",
-    stack: ["react"],
-    github: "https://github.com/user/project-one",
-    live: "https://project-one.com",
+    stack: ["django", "react", "DRF", "tailwind"],
+    github: "",
+    live: "https://legaldadik.ir",
   },
   {
     num: "02",
-    title: "Project Two",
-    category: "fullstack",
-    description: "This is the second project",
+    title: "Asanscrape Project",
+    category: "Backend",
+    description: "automatic web scraping tool",
     image: "/assets/work/thumb2.png",
-    stack: ["django", "DRF", "react", "tailwind"],
-    github: "https://github.com/user/project-two",
-    live: "https://project-two.com",
+    stack: ["django", "DRF", "celery", "rabbitmq"],
+    github: "",
+    live: "https://asanscrape.com",
   },
   {
     num: "03",
-    title: "Project Three",
-    category: "backend",
-    description: "This is the third project",
+    title: "",
+    category: "Frontend",
+    description: "3D portfolio using threejs",
     image: "/assets/work/thumb3.png",
-    stack: ["django", "rest framework"],
-    github: "https://github.com/user/project-three",
-    live: "https://project-three.com",
+    stack: ["react", "threejs"],
+    github: "https://github.com/ali-smz/3d-react-website",
+    live: "https://3d-react-portfolio-phi.vercel.app/",
+  },
+  {
+    num: "04",
+    title: "Apple Website Clone",
+    category: "Frontend",
+    description: "Apple Website Clone using GSAP",
+    image: "/assets/work/thumb4.png",
+    stack: ["react", "GSAP"],
+    github: "https://github.com/ali-smz/apple-wbsite-clone",
+    live: "https://apple-wbsite-clone.vercel.app/",
+  },
+  {
+    num: "05",
+    title: "Telario",
+    category: "Frontend",
+    description: "A Platrom to buy and see the price of Fabrics",
+    image: "/assets/work/thumb5.png",
+    stack: ["react", "tailwind" , "MUI"],
+    github: "",
+    live: "https://telario.ir",
   },
 ];
 const Work = () => {
@@ -76,7 +97,7 @@ const Work = () => {
               <p className="text-white/60">{project.description}</p>
               <ul className="flex gap-4">
                 {project.stack.map((item, index) => (
-                  <li key={index} className="text-xl text-accent">
+                  <li key={index} className="text-xl text-accent text-wrap">
                     {item}
                     {index !== project.stack.length - 1 && ","}
                   </li>

@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://alisamizade.ir
+
+# Sitemaps
+Sitemap: https://alisamizade.ir/sitemap.xml
